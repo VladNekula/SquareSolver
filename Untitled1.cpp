@@ -6,6 +6,8 @@ double Discriminant(double a, double b, double c) {
     return b * b - 4.0 * a * c;
 }
 
+
+
 int korni(double a, double b, double c) {
     int D = Discriminant(a, b, c);
     if (D < 0) {
