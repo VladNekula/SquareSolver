@@ -13,24 +13,18 @@ int main() {
     double b = NAN;
     double c = NAN;
 
-    char exit;
-    int input;
-
-    while (true) {
+    int input = NAN;
+    do {
         printf("Введите a, b и c (чтобы выйти из цикла, введите \'e\'): ");
         int tmp = scanf("%lf %lf %lf", &a, &b, &c);
         if (tmp != 3) {
-            scanf("%c", &exit);
-            if (exit == 'e') {
-                break;
-            }
-            while ((input = getchar) != '\n' && input != EOF);
             printf("Некорректный формат ввода\n");
+            while ((input = getchar()) != '\n' && input != EOF);
         }
         else {
             korni(a, b, c);
         }
-    }
+    } while (getchar() != 'e');
     printf("Вы вышли из цикла");
     return 0;
 }
