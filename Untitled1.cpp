@@ -13,22 +13,29 @@ int main() {
     double b = NAN;
     double c = NAN;
 
-    do {
+    char exit;
+    int input;
+
+    while (true) {
         printf("Введите a, b и c (чтобы выйти из цикла, введите \'e\'): ");
         int tmp = scanf("%lf %lf %lf", &a, &b, &c);
         if (tmp != 3) {
+            scanf("%c", &exit);
+            if (exit == 'e') {
+                break;
+            }
+            while ((input = getchar) != '\n' && input != EOF);
             printf("Некорректный формат ввода\n");
-            while (getchar() != '\n');
         }
         else {
             korni(a, b, c);
         }
-    } while (getchar() != 'e');
+    }
     printf("Вы вышли из цикла");
     return 0;
 }
 
-double Discriminant(double a, double b, double c) {
+double Discriminant(double a, double b, dыouble c) {
     return b * b - 4.0 * a * c;
 }
 
