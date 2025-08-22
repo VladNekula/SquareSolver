@@ -9,7 +9,7 @@ double Discriminant(double a, double b, double c) {
 int korni(double a, double b, double c) {
     int D = Discriminant(a, b, c);
     if (D < 0) {
-        printf("Íåò êîðíåé\n");
+        printf("ÐÐµÑ‚ ÐºÐ¾Ñ€Ð½ÐµÐ¹\n");
         return 0;
     }
     else if (D == 0) {
@@ -27,9 +27,10 @@ int korni(double a, double b, double c) {
 
 int main() {
     double a, b, c;
-    printf("Ââåäèòå a, b è c: ");
+    printf("Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ a, b Ð¸ c: ");
     scanf("%lf %lf %lf", &a, &b, &c);
     korni(a, b, c);
     return 0;
 }
+
 
