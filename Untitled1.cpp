@@ -18,6 +18,7 @@ int main() {
         int tmp = scanf("%lf %lf %lf", &a, &b, &c);
         if (tmp != 3) {
             printf("Некорректный формат ввода\n");
+            while (getchar() != '\n');
         }
         else {
             korni(a, b, c);
