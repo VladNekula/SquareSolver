@@ -14,6 +14,7 @@ int main() {
     double c = NAN;
 
     int input = NAN;
+
     do {
         printf("¬ведите a, b и c (чтобы выйти из цикла, введите \'e\'): ");
         int tmp = scanf("%lf %lf %lf", &a, &b, &c);
@@ -29,7 +30,7 @@ int main() {
     return 0;
 }
 
-double Discriminant(double a, double b, dыouble c) {
+double Discriminant(double a, double b, double c) {
     return b * b - 4.0 * a * c;
 }
 
