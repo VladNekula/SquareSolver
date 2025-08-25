@@ -2,16 +2,22 @@
 #include <stdio.h>
 #include <math.h>
 
-const double EPSILON = 0.00001;
-const int LENGTH_ARRAY = 5, WEIGHT_ARRAY = 6;
+struct NumbersForTest {
+    double a, b, c;
+    double solution;
+    double x1, x2;
+};
 
-double numberForTest[LENGTH_ARRAY][WEIGHT_ARRAY] = {
-        {1, -5, 6, 2, 2, 3},
-        {1,  1, 1, 0, NAN, NAN},
-        {1, -4, 4, 1, 2, 2},
-        {0, 0, 0, 0, NAN, NAN},
-        {1, -5, 6, 2, 3, 2}
-    };
+NumbersForTest numbersForTestArray[] = {
+    {.a = 1,.b = -5,.c = 6,.solution = 2,.x1 = 2,.x2 = 3},
+    {.a = 1,.b = 1,.c = 1,.solution = 0,.x1 = NAN,.x2 = NAN},
+    {.a = 1,.b = -4,.c = 4,.solution = 1,.x1 = 2,.x2 = 2},
+    {.a = 0,.b = 0,.c = 0,.solution = 0,.x1 = NAN,.x2 = NAN},
+    {.a = 1,.b = -5,.c = 6,.solution = 2,.x1 = 3,.x2 = 2}
+};
+
+const double EPSILON = 0.00001;
+const int LENGTH_ARRAY = sizeof(numbersForTestArray) / sizeof(numbersForTestArray[0]);
 
 double Discriminant(double a, double b, double c);
 int SolveSquare(double a, double b, double c, double* x1, double* x2);
@@ -84,32 +90,32 @@ int SolveSquare(double a, double b, double c, double* x1, double* x2) {
 }
 
 void SolveTest(double* x1, double* x2) {
-    extern double numberForTest[LENGTH_ARRAY][WEIGHT_ARRAY];
+    extern NumbersForTest numbersForTestArray[LENGTH_ARRAY];
     for (int i = 0; i < LENGTH_ARRAY; i++) {
-        int solution = SolveSquare(numberForTest[i][0], numberForTest[i][1], numberForTest[i][2], x1, x2);
+        int solution = SolveSquare(numbersForTestArray[i].a, numbersForTestArray[i].b, numbersForTestArray[i].c, x1, x2);
 
         bool isCorrect = false;
 
-        if (solution != (int)numberForTest[i][3]) {
+        if (solution != (int)numbersForTestArray[i].solution) {
             isCorrect = false;
         }
         else if (solution == 0) {
             isCorrect = isnan(*x1) && isnan(*x2);
         }
         else {
-            isCorrect = (IsEqual(*x1, numberForTest[i][4]) && IsEqual(*x2, numberForTest[i][5])) || (IsEqual(*x1, numberForTest[i][5]) && IsEqual(*x2, numberForTest[i][4]));
+            isCorrect = (IsEqual(*x1, numbersForTestArray[i].x1) && IsEqual(*x2, numbersForTestArray[i].x2)) || (IsEqual(*x1, numbersForTestArray[i].x2) && IsEqual(*x2, numbersForTestArray[i].x1));
         }
 
         if (!isCorrect) {
             printf("Error: SolveSquare(%g, %g, %g) -> %d, x1 = %g, x2 = %g "
                    "(should be %g, x1 = %g, x2 = %g)\n",
-                   numberForTest[i][0], numberForTest[i][1], numberForTest[i][2],
+                   numbersForTestArray[i].a, numbersForTestArray[i].b, numbersForTestArray[i].c,
                    solution, *x1, *x2,
-                   numberForTest[i][3], numberForTest[i][4], numberForTest[i][5]);
+                   numbersForTestArray[i].solution, numbersForTestArray[i].x1, numbersForTestArray[i].x2);
         }
         else {
             printf("Correct: SolveSquare(%g, %g, %g) -> %d, x1 = %g, x2 = %g\n",
-                   numberForTest[i][0], numberForTest[i][1], numberForTest[i][2],
+                   numbersForTestArray[i].a, numbersForTestArray[i].b, numbersForTestArray[i].c,
                    solution, *x1, *x2);
         }
     }

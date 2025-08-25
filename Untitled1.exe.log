@@ -1,0 +1,192 @@
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\vladn\OneDrive\Desktop\SquareSolver\Untitled1.exe,
+
+ВНЕЗАПНО: Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x75420714 в функции RaiseException() в модуле C:\Windows\System32\KERNELBASE.dll. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x005081DC (32-bit), Flags: Cmdre0, Thread: 0x53F4 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x75420714 in C:\Windows\System32\KERNELBASE.dll: RaiseException()
+# 1 0x75E78CBF in C:\Windows\System32\msvcrt.dll: modf()
+# 2 0x75E78A6E in C:\Windows\System32\msvcrt.dll: modf()
+# 3 0x75E7BCE7 in C:\Windows\System32\msvcrt.dll: modf()
+# 4 0x75E755A0 in C:\Windows\System32\msvcrt.dll: modf()
+# 5 0x75E697E8 in C:\Windows\System32\msvcrt.dll: sqrt()
+
+# 6 0x0042D8EE in C:\Users\vladn\OneDrive\Desktop\SquareSolver\Untitled1.exe: main() at C:/Users/vladn/OneDrive/Desktop/SquareSolver/Untitled1.cpp:23:
+
+     21: int main() {
+     22:     double x1 = NAN, x2 = NAN;
+=>   23:     SolveTest(&x1, &x2);
+     24:     return 0;
+     25: }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\vladn\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 25 2025 10:41:27, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Aug 25 2025 10:41:44
+
+Run file:	C:\Users\vladn\OneDrive\Desktop\SquareSolver\Untitled1.exe
+Directory:	C:\Users\vladn\OneDrive\Desktop\SquareSolver
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\vladn\OneDrive\Desktop\SquareSolver\Untitled1.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x75420714 в функции RaiseException() в модуле C:\Windows\System32\KERNELBASE.dll. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x005081DC (32-bit), Flags: Cmdre0, Thread: 0x53F4 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x75420714 in C:\Windows\System32\KERNELBASE.dll: RaiseException()
+# 1 0x75E78CBF in C:\Windows\System32\msvcrt.dll: modf()
+# 2 0x75E78A6E in C:\Windows\System32\msvcrt.dll: modf()
+# 3 0x75E7BCE7 in C:\Windows\System32\msvcrt.dll: modf()
+# 4 0x75E755A0 in C:\Windows\System32\msvcrt.dll: modf()
+# 5 0x75E697E8 in C:\Windows\System32\msvcrt.dll: sqrt()
+
+# 6 0x0042D8EE in C:\Users\vladn\OneDrive\Desktop\SquareSolver\Untitled1.exe: main() at C:/Users/vladn/OneDrive/Desktop/SquareSolver/Untitled1.cpp:23:
+
+     21: int main() {
+     22:     double x1 = NAN, x2 = NAN;
+=>   23:     SolveTest(&x1, &x2);
+     24:     return 0;
+     25: }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\vladn\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 25 2025 10:41:27, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Aug 25 2025 10:41:44
+
+Run file:	C:\Users\vladn\OneDrive\Desktop\SquareSolver\Untitled1.exe
+Directory:	C:\Users\vladn\OneDrive\Desktop\SquareSolver
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\vladn\OneDrive\Desktop\SquareSolver\Untitled1.exe,
+
+ВНЕЗАПНО: Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x75420714 в функции RaiseException() в модуле C:\Windows\System32\KERNELBASE.dll. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x005081DC (32-bit), Flags: Cmdre0, Thread: 0x5438 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x75420714 in C:\Windows\System32\KERNELBASE.dll: RaiseException()
+# 1 0x75E78CBF in C:\Windows\System32\msvcrt.dll: modf()
+# 2 0x75E78A6E in C:\Windows\System32\msvcrt.dll: modf()
+# 3 0x75E7BCE7 in C:\Windows\System32\msvcrt.dll: modf()
+# 4 0x75E755A0 in C:\Windows\System32\msvcrt.dll: modf()
+# 5 0x75E697E8 in C:\Windows\System32\msvcrt.dll: sqrt()
+
+# 6 0x0042D8EE in C:\Users\vladn\OneDrive\Desktop\SquareSolver\Untitled1.exe: main() at C:/Users/vladn/OneDrive/Desktop/SquareSolver/Untitled1.cpp:23:
+
+     21: int main() {
+     22:     double x1 = NAN, x2 = NAN;
+=>   23:     SolveTest(&x1, &x2);
+     24:     return 0;
+     25: }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\vladn\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 25 2025 10:41:27, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Aug 25 2025 10:42:09
+
+Run file:	C:\Users\vladn\OneDrive\Desktop\SquareSolver\Untitled1.exe
+Directory:	C:\Users\vladn\OneDrive\Desktop\SquareSolver
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\vladn\OneDrive\Desktop\SquareSolver\Untitled1.exe,
+
+ВНЕЗАПНО: signal (8, 0x00): SIGFPE: Грубая ошибка в вычислениях. 
+
+Недопустимая операция с плавающей точкой.
+
+#1: Исключение EXCEPTION_FLT_INVALID_OPERATION (0xC0000090) при выполнении кода по адресу 0x75420714 в функции RaiseException() в модуле C:\Windows\System32\KERNELBASE.dll. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400], Instance: 0x005081DC (32-bit), Flags: Cmdre0, Thread: 0x5438 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x75420714 in C:\Windows\System32\KERNELBASE.dll: RaiseException()
+# 1 0x75E78CBF in C:\Windows\System32\msvcrt.dll: modf()
+# 2 0x75E78A6E in C:\Windows\System32\msvcrt.dll: modf()
+# 3 0x75E7BCE7 in C:\Windows\System32\msvcrt.dll: modf()
+# 4 0x75E755A0 in C:\Windows\System32\msvcrt.dll: modf()
+# 5 0x75E697E8 in C:\Windows\System32\msvcrt.dll: sqrt()
+
+# 6 0x0042D8EE in C:\Users\vladn\OneDrive\Desktop\SquareSolver\Untitled1.exe: main() at C:/Users/vladn/OneDrive/Desktop/SquareSolver/Untitled1.cpp:23:
+
+     21: int main() {
+     22:     double x1 = NAN, x2 = NAN;
+=>   23:     SolveTest(&x1, &x2);
+     24:     return 0;
+     25: }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-03 17:59:06 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\vladn\downloads\codeblocks\mingw\include\txlib.h
+Compiled:	Aug 25 2025 10:41:27, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Aug 25 2025 10:42:09
+
+Run file:	C:\Users\vladn\OneDrive\Desktop\SquareSolver\Untitled1.exe
+Directory:	C:\Users\vladn\OneDrive\Desktop\SquareSolver
+
+--------------------------------------------------
