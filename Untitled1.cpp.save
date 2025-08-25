@@ -1,4 +1,4 @@
-#include <TXLib.h>  //Проверка ввода, вывода, зациклить,  общие вычисления
+#include <TXLib.h>
 #include <stdio.h>
 #include <math.h>
 
@@ -14,19 +14,23 @@ int main() {
     double c = NAN;
 
     int input = NAN;
-    
+
     do {
-        printf("Введите a, b и c (чтобы выйти из цикла, введите \'e\'): ");
+        printf("Р’РІРµРґРёС‚Рµ a, b Рё c (С‡С‚РѕР±С‹ РІС‹Р№С‚Рё РёР· С†РёРєР»Р°, РІРІРµРґРёС‚Рµ \'e\'): ");
         int tmp = scanf("%lf %lf %lf", &a, &b, &c);
         if (tmp != 3) {
+<<<<<<< HEAD
             printf("Некорректный формат ввода\n");
             while ((input = getchar()) != '\n' && input != EOF);
+=======
+            printf("РЅРµРєРѕСЂСЂРµРєС‚РЅС‹Р№ С„РѕСЂРјР°С‚ РІРІРѕРґР°\n");
+>>>>>>> d6de6d67d4940157a89ae8f2b168fc02f9c07490
         }
         else {
             korni(a, b, c);
         }
     } while (getchar() != 'e');
-    printf("Вы вышли из цикла");
+    printf("Р’С‹ РІС‹С€Р»Рё РёР· С†РёРєР»Р°");
     return 0;
 }
 
@@ -41,7 +45,7 @@ bool isEqual(double number1, double number2) {
 void korni(double a, double b, double c) {
     double D = Discriminant(a, b, c);
     if (D < 0) {
-        printf("Нет корней\n");
+        printf("РќРµС‚ РєРѕСЂРЅРµР№\n");
     }
     else if (isEqual(D, (double) 0)) {
         double x = -b / (2.0 * a);
@@ -56,4 +60,5 @@ void korni(double a, double b, double c) {
         printf("x1 = %g\nx2 = %g\n", x1, x2);
     }
 }
+
 
